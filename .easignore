@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+npm-debug.*
+yarn-error.log
+
+# native / local
+.expo/
+android/
+ios/
+dist/
+web-build/
+
+# large / local artifacts
+*.apk
+*.aab
+*.jks
+*.keystore
+VoiceTask.apk
+VoiceTask-*.zip
+VoiceTask-*.apk
+
+# git / ide
+.git/
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# docs / misc not needed for build
+searched_images/
+*.md
+!README.md
