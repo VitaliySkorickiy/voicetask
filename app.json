@@ -2,66 +2,33 @@
   "expo": {
     "name": "Голосовые заметки",
     "slug": "voicetask",
-    "version": "1.5.2",
+    "version": "1.5.7",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "scheme": "voicetask",
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#4F46E5"
+      "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
-      "assets/icon.png",
-      "assets/adaptive-icon.png",
-      "assets/splash-icon.png",
-      "assets/notification-icon.png"
+      "**/*"
     ],
     "ios": {
-      "supportsTablet": false,
-      "bundleIdentifier": "ru.vitaliyskorickiy.voicetask",
-      "infoPlist": {
-        "NSMicrophoneUsageDescription": "Приложению нужен микрофон для голосового ввода задач",
-        "NSSpeechRecognitionUsageDescription": "Приложению нужно распознавание речи для создания задач голосом"
-      }
+      "supportsTablet": true
     },
     "android": {
+      "package": "ru.vitaliyskorickiy.voicetask",
+      "versionCode": 17,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#4F46E5"
-      },
-      "package": "ru.vitaliyskorickiy.voicetask",
-      "permissions": [
-        "RECORD_AUDIO",
-        "POST_NOTIFICATIONS",
-        "RECEIVE_BOOT_COMPLETED",
-        "VIBRATE",
-        "SCHEDULE_EXACT_ALARM"
-      ],
-      "versionCode": 16
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-updates",
-      [
-        "expo-speech-recognition",
-        {
-          "microphonePermission": "Нужен микрофон для голосового ввода задач",
-          "speechRecognitionPermission": "Нужно распознавание речи для превращения голоса в текст",
-          "androidSpeechServicePackages": [
-            "com.google.android.googlequicksearchbox",
-            "com.google.android.tts",
-            "com.google.android.as"
-          ]
-        }
-      ],
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/notification-icon.png",
-          "color": "#4F46E5"
-        }
-      ],
       "./plugins/withVoskModel.js",
       [
         "./plugins/withRuStorePay.js",
@@ -69,22 +36,16 @@
           "consoleAppId": "2063783346",
           "payScheme": "ru.vitaliyskorickiy.voicetask.pay"
         }
-      ]
+      ],
+      "expo-speech-recognition"
     ],
-    "owner": "vitaliyskorickiy",
+    "updates": {
+      "url": "https://u.expo.dev/6e5a0800-368b-46f9-8bef-d35a40dc940d"
+    },
+    "runtimeVersion": "1.2.3",
     "extra": {
       "eas": {
         "projectId": "6e5a0800-368b-46f9-8bef-d35a40dc940d"
-      }
-    },
-    "runtimeVersion": "1.5.2",
-    "updates": {
-      "url": "https://u.expo.dev/6e5a0800-368b-46f9-8bef-d35a40dc940d",
-      "enabled": true,
-      "checkAutomatically": "ON_LOAD",
-      "fallbackToCacheTimeout": 0,
-      "requestHeaders": {
-        "expo-channel-name": "production"
       }
     }
   }
