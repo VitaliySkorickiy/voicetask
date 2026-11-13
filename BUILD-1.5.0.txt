@@ -1,0 +1,25 @@
+СБОРКА 1.5.0
+=============
+1) Скопируй в проект:
+   App.js, app.json, package.json, eas.json, metro.config.js,
+   .easignore, plugins\withVoskModel.js
+
+2) assets\model-ru\ — small-модель (не 1.5 ГБ)
+
+3) Команды:
+   cd /d C:\голосовой_задачник\VoiceTask-ota-1.2.3
+   npm install
+   npx expo config --type public
+   set EAS_NO_VCS=1
+
+   REM APK для телефона / друзей:
+   eas build -p android --profile production-apk
+
+   REM AAB для RuStore:
+   eas build -p android --profile production
+
+4) После установки внизу: ch:production · rt:1.5.0 · Версия 1.5.0
+
+5) OTA дальше:
+   eas update --channel production --message "..."
+   (version в app.json = 1.5.0)

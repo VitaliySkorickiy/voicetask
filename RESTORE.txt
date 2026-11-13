@@ -1,0 +1,42 @@
+ВОССТАНОВЛЕНИЕ ПРОЕКТА «Голосовые заметки» / VoiceTask
+=====================================================
+После переустановки Windows.
+
+1) Скачай архив VoiceTask-RESTORE.zip
+
+2) Распакуй ВСЁ в:
+   C:\Users\Vi\Desktop\голосовой_задачник\VoiceTask
+   (создай папку VoiceTask, если нужно)
+
+3) Установи инструменты (если ещё нет):
+   - Node.js LTS: https://nodejs.org
+   - Git (по желанию)
+   - EAS CLI:  npm install -g eas-cli
+   - Войти: eas login  (аккаунт vitaliyskorickiy)
+
+4) В папке проекта:
+   cd /d C:\Users\Vi\Desktop\голосовой_задачник\VoiceTask
+   npm install
+   npm install react-native-vosk
+   npx expo config --type public
+
+5) Сборка:
+   set EAS_NO_VCS=1
+   eas build -p android --profile production-apk
+
+6) Важно:
+   - assets\model-ru — модель Vosk (уже в архиве, ~11 МБ)
+   - app.json: consoleAppId = 2063783346
+   - package: ru.vitaliyskorickiy.voicetask
+   - Pro код друзьям: DRUZIA2026 (не публиковать)
+   - Keystore остаётся на серверах Expo (не на диске) — eas credentials
+
+7) Чего нет в архиве / восстановить отдельно:
+   - node_modules (ставится npm install)
+   - android/ ios/ папки prebuild (EAS соберёт в облаке)
+   - GitHub remote, если был — заново git init / clone
+
+Файлы в архиве:
+  App.js, app.json, package.json, eas.json, metro.config.js,
+  babel.config.js, RuStorePay.js, plugins/, assets/,
+  тексты RuStore, privacy, .easignore

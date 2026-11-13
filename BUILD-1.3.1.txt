@@ -1,0 +1,26 @@
+СБОРКА APK 1.3.1 — команды на ПК
+================================
+
+1) Скопируй в C:\голосовой_задачник\VoiceTask-ota-1.2.3:
+   App.js, app.json, package.json, eas.json, metro.config.js,
+   babel.config.js, .easignore, plugins\withVoskModel.js
+
+2) Модель (small, НЕ 1.5 ГБ):
+   assets\model-ru\am\
+   assets\model-ru\conf\
+   ...
+
+3) Команды:
+   cd /d C:\голосовой_задачник\VoiceTask-ota-1.2.3
+   npm install
+   npm install react-native-vosk
+   npx expo config --type public
+   set EAS_NO_VCS=1
+   eas build -p android --profile preview
+
+4) Compressed project files — НЕ 1.5 GB (лучше < 200 MB)
+
+5) Установи APK, удалив старое приложение.
+   Внизу: ch:preview · rt:1.3.1 · Версия 1.3.1
+
+6) Микрофон: 1 нажатие — запись, 2 нажатие — стоп, без краша.
