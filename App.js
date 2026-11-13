@@ -15,13 +15,17 @@ import {
   Platform,
 
   Linking,
-} from 'react-native';
+} 
+
+from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Updates from 'expo-updates';
 import * as RuStorePay from './RuStorePay';
 import * as Notifications from 'expo-notifications';
 
-} from 'react-native';
+
+
+ from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Updates from 'expo-updates';
 
