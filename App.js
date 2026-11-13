@@ -13,18 +13,18 @@ import {
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
-<<<<<<< HEAD
+
   Linking,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Updates from 'expo-updates';
 import * as RuStorePay from './RuStorePay';
 import * as Notifications from 'expo-notifications';
-=======
+
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Updates from 'expo-updates';
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
 
 // Нативные голосовые модули подключаем ТОЛЬКО при нажатии на микрофон,
 // иначе на части сборок/устройств приложение падает при старте.
@@ -52,7 +52,7 @@ function getSpeechModule() {
 
 const VOSK_MODEL = 'model-ru';
 
-<<<<<<< HEAD
+
 try {
   Notifications.setNotificationHandler({
     handleNotification: async () => ({
@@ -212,8 +212,8 @@ async function cancelTaskReminder(taskOrIds) {
 }
 
 
-=======
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
+
 const COLORS = {
   primary: '#4F46E5',
   primaryLight: '#818CF8',
@@ -235,7 +235,7 @@ const EXAMPLES_KEY = '@voicetask_examples_dismissed_v1';
 const PRO_KEY = '@voicetask_pro_v1';
 // Секретный код для друзей (безлимит без оплаты). Смени на свой.
 const PROMO_CODE = 'DRUZIA2026';
-<<<<<<< HEAD
+
 // Ссылка на оплату 99 ₽ из кабинета ЮKassa (или другая платёжная ссылка).
 // Создайте в ЮKassa «Ссылку на оплату» и вставьте URL сюда.
 const YOOKASSA_PAY_URL = 'https://yookassa.ru/my/i/REPLACE_WITH_YOUR_PAYMENT_LINK';
@@ -243,10 +243,10 @@ const YOOKASSA_PAY_URL = 'https://yookassa.ru/my/i/REPLACE_WITH_YOUR_PAYMENT_LIN
 const PAID_PRO_CODE = 'PRO99';
 const ONBOARDING_KEY = '@voicetask_onboarding_v1';
 const APP_VERSION = '1.5.7';
-=======
+
 const ONBOARDING_KEY = '@voicetask_onboarding_v1';
 const APP_VERSION = '1.5.2';
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
 
 const ONBOARDING_STEPS = [
   {
@@ -257,11 +257,11 @@ const ONBOARDING_STEPS = [
   {
     icon: '📅',
     title: 'Умные даты',
-<<<<<<< HEAD
+
     text: '«Завтра», «в пятницу» — в календарь. Напоминания: вечером накануне и утром в день задачи.',
-=======
+
     text: '«Завтра», «в пятницу», «пятое ноября» — задача сама встанет в календарь.',
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   },
   {
     icon: '✅',
@@ -884,7 +884,7 @@ function PriorityChips({ value, onChange }) {
   );
 }
 
-<<<<<<< HEAD
+
 function VersionBlock({ otaInfo, onCheckUpdate }) {
   return (
     <View style={s.versionBlock}>
@@ -896,8 +896,8 @@ function VersionBlock({ otaInfo, onCheckUpdate }) {
   );
 }
 
-=======
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
+
 function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, isPro, onOpenPro, onOpenTips }) {
   const [tab, setTab] = useState('active');
   const now = new Date();
@@ -950,7 +950,7 @@ function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, 
     <SafeAreaView style={s.container}>
       <StatusBar barStyle="dark-content" backgroundColor={COLORS.background} translucent={false} hidden={false} />
       <View style={s.header}>
-<<<<<<< HEAD
+
         <View style={s.headerRow}>
           <Text style={s.logo} numberOfLines={1}>
             Голосовые заметки
@@ -960,7 +960,7 @@ function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, 
               <Text style={s.tipsBadgeText}>?</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={onOpenPro} style={s.proBadge} accessibilityLabel="Pro">
-=======
+
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
           <Text style={s.logo}>Голосовые заметки</Text>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
@@ -968,18 +968,18 @@ function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, 
               <Text style={s.tipsBadgeText}>?</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={onOpenPro} style={s.proBadge}>
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
               <Text style={s.proBadgeText}>{isPro ? 'Pro' : 'Free'}</Text>
             </TouchableOpacity>
           </View>
         </View>
-<<<<<<< HEAD
+
         <Text style={s.subtitle} numberOfLines={1}>
           Задачи голосом · офлайн
         </Text>
-=======
+
         <Text style={s.subtitle}>Заметки и задачи голосом · офлайн</Text>
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
       </View>
       <View style={s.tabs}>
         {[
@@ -1048,11 +1048,11 @@ function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, 
               ))}
             </View>
           ) : null}
-<<<<<<< HEAD
+
           <VersionBlock otaInfo={otaInfo} onCheckUpdate={onCheckUpdate} />
           <View style={{ height: 100 }} />
-=======
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
+
         </ScrollView>
       ) : (
         <FlatList
@@ -1070,7 +1070,7 @@ function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, 
           renderItem={({ item }) => (
             <TaskCard task={item} onToggle={onToggle} onDelete={onDelete} />
           )}
-<<<<<<< HEAD
+
           ListFooterComponent={
             <View>
               <VersionBlock otaInfo={otaInfo} onCheckUpdate={onCheckUpdate} />
@@ -1079,7 +1079,7 @@ function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, 
           }
         />
       )}
-=======
+
           ListFooterComponent={<View style={{ height: 110 }} />}
         />
       )}
@@ -1090,7 +1090,7 @@ function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, 
           <Text style={s.otaBtn}>Обновить</Text>
         </TouchableOpacity>
       </View>
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
 
       <TouchableOpacity style={s.fab} onPress={onAdd} activeOpacity={0.85}>
         <Text style={s.fabText}>+</Text>
@@ -1099,11 +1099,11 @@ function HomeScreen({ tasks, onToggle, onDelete, onAdd, otaInfo, onCheckUpdate, 
   );
 }
 
-<<<<<<< HEAD
+
 function AddTaskScreen({ onSave, onCancel, isPro, onNeedPro }) {
-=======
+
 function AddTaskScreen({ onSave, onCancel, isPro }) {
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   const [text, setText] = useState('');
   const [priority, setPriority] = useState('medium');
   const [preview, setPreview] = useState(null);
@@ -1268,7 +1268,7 @@ function AddTaskScreen({ onSave, onCancel, isPro }) {
         const raw = await AsyncStorage.getItem(VOICE_USES_KEY);
         const used = raw ? parseInt(raw, 10) || 0 : 0;
         if (used >= FREE_LIMITS.voiceUses) {
-<<<<<<< HEAD
+
           setSpeechError('Лимит голоса. Можно ввести текст или оформить Pro.');
           if (onNeedPro) onNeedPro('voice');
           else {
@@ -1278,14 +1278,14 @@ function AddTaskScreen({ onSave, onCancel, isPro }) {
               [{ text: 'OK' }]
             );
           }
-=======
+
           setSpeechError('Лимит голоса Free: ' + FREE_LIMITS.voiceUses + ' раз. Оформите Pro или введите текст.');
           Alert.alert(
             'Лимит голоса',
             'В бесплатной версии до ' + FREE_LIMITS.voiceUses + ' голосовых вводов. Дальше — текст или Pro.',
             [{ text: 'OK' }]
           );
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
           return;
         }
       } catch (_) {}
@@ -1643,8 +1643,6 @@ async function runOTACheck() {
 }
 
 
-<<<<<<< HEAD
-
 function LimitPaywallScreen({ reason, onClose, onBuyPro, onOpenPro, proLoading }) {
   const isVoice = reason === 'voice';
   const title = isVoice ? 'Лимит голосового ввода' : 'Лимит задач';
@@ -1694,30 +1692,30 @@ function LimitPaywallScreen({ reason, onClose, onBuyPro, onOpenPro, proLoading }
 }
 
 function ProScreen({ isPro, onClose, onActivatePromo, onBuyPro, onRestorePro, proLoading, proError }) {
-=======
+
 function ProScreen({ isPro, onClose, onActivatePromo }) {
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   const [code, setCode] = useState('');
   const [promoError, setPromoError] = useState(null);
   const [showPromo, setShowPromo] = useState(false);
 
   const submitPromo = () => {
     const entered = (code || '').trim().toUpperCase();
-<<<<<<< HEAD
+
     const friends = String(PROMO_CODE || '').trim().toUpperCase();
     const paid = String(PAID_PRO_CODE || '').trim().toUpperCase();
-=======
+
     const expected = String(PROMO_CODE || '').trim().toUpperCase();
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
     if (!entered) {
       setPromoError('Введите код');
       return;
     }
-<<<<<<< HEAD
+
     if (entered === friends || (paid && entered === paid)) {
-=======
+
     if (entered === expected) {
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
       setPromoError(null);
       onActivatePromo && onActivatePromo();
     } else {
@@ -1741,11 +1739,11 @@ function ProScreen({ isPro, onClose, onActivatePromo }) {
         <Text style={{ color: COLORS.textSecondary, marginBottom: 16, lineHeight: 22 }}>
           Бесплатно: {FREE_LIMITS.maxActiveTasks} активные задачи и {FREE_LIMITS.voiceUses} голосовых ввода.
           {'\n\n'}
-<<<<<<< HEAD
+
           Pro — без ограничений на задачи и голос. Оплата один раз, без подписки. После оплаты введите код активации.
-=======
+
           Pro — без ограничений на задачи и голос. Оплата один раз, без подписки.
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
         </Text>
 
         <View style={s.proCard}>
@@ -1759,7 +1757,7 @@ function ProScreen({ isPro, onClose, onActivatePromo }) {
           </Text>
         ) : (
           <>
-<<<<<<< HEAD
+
             <TouchableOpacity style={s.proBtn} onPress={onBuyPro} disabled={proLoading}>
               {proLoading ? (
                 <ActivityIndicator color="#fff" />
@@ -1778,7 +1776,7 @@ function ProScreen({ isPro, onClose, onActivatePromo }) {
               </Text>
             ) : null}
 
-=======
+
             <TouchableOpacity
               style={s.proBtn}
               onPress={() =>
@@ -1792,7 +1790,7 @@ function ProScreen({ isPro, onClose, onActivatePromo }) {
               <Text style={s.proBtnText}>Купить Pro · 99 ₽</Text>
             </TouchableOpacity>
 
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
             <TouchableOpacity onPress={() => setShowPromo((v) => !v)} style={{ marginTop: 20 }}>
               <Text style={{ color: COLORS.primary, textAlign: 'center', fontWeight: '600' }}>
                 {showPromo ? 'Скрыть' : 'Есть код активации?'}
@@ -1870,18 +1868,18 @@ export default function App() {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [screen, setScreen] = useState('home');
-<<<<<<< HEAD
+
   const [limitReason, setLimitReason] = useState('tasks');
   const [otaInfo, setOtaInfo] = useState('');
   const [isPro, setIsPro] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [proLoading, setProLoading] = useState(false);
   const [proError, setProError] = useState(null);
-=======
+
   const [otaInfo, setOtaInfo] = useState('');
   const [isPro, setIsPro] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
 
   useEffect(() => {
     let cancelled = false;
@@ -1892,7 +1890,7 @@ export default function App() {
           if (!cancelled) setIsPro(pro === '1');
         } catch (_) {}
         try {
-<<<<<<< HEAD
+
           // Восстановление покупки Pro через RuStore (нерасходуемый товар).
           const owned = await RuStorePay.getOwnedProductIds();
           if (!cancelled && owned.indexOf(RuStorePay.PRO_PRODUCT_ID) !== -1) {
@@ -1903,8 +1901,8 @@ export default function App() {
           }
         } catch (_) {}
         try {
-=======
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
+
           const seen = await AsyncStorage.getItem(ONBOARDING_KEY);
           if (!cancelled) setShowOnboarding(seen !== '1');
         } catch (_) {
@@ -1954,10 +1952,10 @@ export default function App() {
   const addTask = async (data) => {
     const activeCount = tasks.filter((t) => !t.completed).length;
     if (!isPro && activeCount >= FREE_LIMITS.maxActiveTasks) {
-<<<<<<< HEAD
+
       setLimitReason('tasks');
       setScreen('limit');
-=======
+
       Alert.alert(
         'Лимит бесплатной версии',
         'До ' + FREE_LIMITS.maxActiveTasks + ' активных задач. Оформите Pro или завершите старые.',
@@ -1966,7 +1964,7 @@ export default function App() {
           { text: 'Pro', onPress: () => setScreen('pro') },
         ]
       );
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
       return;
     }
     const newTask = {
@@ -1975,13 +1973,13 @@ export default function App() {
       completed: false,
       ...data,
     };
-<<<<<<< HEAD
+
     try {
       const nids = await scheduleTaskReminder(newTask);
       if (nids && nids.length) newTask.notificationIds = nids;
     } catch (_) {}
-=======
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
+
     await persist([newTask, ...tasks]);
     setScreen('home');
   };
@@ -1993,7 +1991,7 @@ export default function App() {
     setScreen('home');
   };
 
-<<<<<<< HEAD
+
   const unlockPro = async () => {
     try {
       await AsyncStorage.setItem(PRO_KEY, '1');
@@ -2074,7 +2072,7 @@ export default function App() {
         notificationId: null,
       });
     }
-=======
+
   const toggleComplete = async (id) => {
     const next = tasks.map((t) =>
       t.id === id
@@ -2085,18 +2083,18 @@ export default function App() {
           }
         : t
     );
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
     await persist(next);
   };
 
   const deleteTask = async (id) => {
-<<<<<<< HEAD
+
     const t = tasks.find((x) => x.id === id);
     if (t) await cancelTaskReminder(t);
     await persist(tasks.filter((x) => x.id !== id));
-=======
+
     await persist(tasks.filter((t) => t.id !== id));
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   };
 
   const finishOnboarding = async () => {
@@ -2119,7 +2117,7 @@ export default function App() {
   }
 
   if (screen === 'add') {
-<<<<<<< HEAD
+
     return (
       <AddTaskScreen
         onSave={addTask}
@@ -2143,9 +2141,9 @@ export default function App() {
         proLoading={proLoading}
       />
     );
-=======
+
     return <AddTaskScreen onSave={addTask} onCancel={() => setScreen('home')} isPro={isPro} />;
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   }
 
   if (screen === 'pro') {
@@ -2154,13 +2152,13 @@ export default function App() {
         isPro={isPro}
         onClose={() => setScreen('home')}
         onActivatePromo={activateProDemo}
-<<<<<<< HEAD
+
         onBuyPro={buyPro}
         onRestorePro={restorePro}
         proLoading={proLoading}
         proError={proError}
-=======
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
+
       />
     );
   }
@@ -2198,7 +2196,7 @@ export default function App() {
 
 const s = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
-<<<<<<< HEAD
+
   header: { paddingHorizontal: 16, paddingTop: 36, paddingBottom: 8 },
   headerRow: {
     flexDirection: 'row',
@@ -2230,7 +2228,7 @@ const s = StyleSheet.create({
     backgroundColor: COLORS.surface,
     marginRight: 8,
     marginBottom: 4,
-=======
+
   header: { paddingHorizontal: 24, paddingTop: 36, paddingBottom: 8 },
   logo: { fontSize: 26, fontWeight: '700', color: COLORS.primary },
   subtitle: { fontSize: 14, color: COLORS.textSecondary, marginTop: 2 },
@@ -2242,7 +2240,7 @@ const s = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 20,
     backgroundColor: COLORS.surface,
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   },
   tabActive: { backgroundColor: COLORS.primary },
   tabText: { fontSize: 14, fontWeight: '500', color: COLORS.textSecondary },
@@ -2257,11 +2255,11 @@ const s = StyleSheet.create({
     marginLeft: 6,
   },
   tabBadgeText: { fontSize: 12, fontWeight: '700', color: COLORS.primary },
-<<<<<<< HEAD
+
   list: { paddingHorizontal: 16, paddingBottom: 24, flexGrow: 1 },
-=======
+
   list: { paddingHorizontal: 24, paddingBottom: 200 },
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   emptyBox: { alignItems: 'center', marginTop: 60 },
   empty: { textAlign: 'center', color: COLORS.textSecondary, fontSize: 16 },
   emptyDay: { alignItems: 'center', paddingVertical: 24 },
@@ -2273,7 +2271,7 @@ const s = StyleSheet.create({
   },
   dayTitle: { fontSize: 17, fontWeight: '700', color: COLORS.text },
   dayCount: { fontSize: 14, color: COLORS.textSecondary },
-<<<<<<< HEAD
+
   versionBlock: {
     marginTop: 28,
     marginBottom: 8,
@@ -2282,7 +2280,7 @@ const s = StyleSheet.create({
     alignItems: 'center',
     borderTopWidth: 1,
     borderTopColor: COLORS.border,
-=======
+
   versionFooter: {
     position: 'absolute',
     bottom: 12,
@@ -2293,7 +2291,7 @@ const s = StyleSheet.create({
     backgroundColor: 'rgba(248,250,252,0.92)',
     paddingVertical: 6,
     borderRadius: 10,
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   },
   versionText: {
     fontSize: 12,
@@ -2305,7 +2303,7 @@ const s = StyleSheet.create({
     color: COLORS.textSecondary,
     textAlign: 'center',
     marginTop: 2,
-<<<<<<< HEAD
+
     opacity: 0.7,
   },
   otaBtn: {
@@ -2319,7 +2317,7 @@ const s = StyleSheet.create({
     width: 34,
     height: 34,
     borderRadius: 17,
-=======
+
     opacity: 0.85,
   },
   otaBtn: {
@@ -2333,16 +2331,16 @@ const s = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
     backgroundColor: COLORS.surface,
     borderWidth: 1,
     borderColor: COLORS.border,
     alignItems: 'center',
     justifyContent: 'center',
-<<<<<<< HEAD
+
     marginRight: 8,
-=======
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
+
   },
   tipsBadgeText: { fontSize: 16, fontWeight: '700', color: COLORS.primary },
   onboardWrap: {
@@ -2414,7 +2412,7 @@ const s = StyleSheet.create({
   },
   proBadge: {
     backgroundColor: COLORS.primary,
-<<<<<<< HEAD
+
     paddingHorizontal: 14,
     paddingVertical: 8,
     borderRadius: 12,
@@ -2423,13 +2421,13 @@ const s = StyleSheet.create({
     flexShrink: 0,
   },
   proBadgeText: { color: '#fff', fontWeight: '700', fontSize: 13 },
-=======
+
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 12,
   },
   proBadgeText: { color: '#fff', fontWeight: '700', fontSize: 12 },
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
   proCard: {
     backgroundColor: COLORS.surface,
     borderRadius: 16,
@@ -2448,13 +2446,13 @@ const s = StyleSheet.create({
   proBtnText: { color: '#fff', fontWeight: '700', fontSize: 16 },
   fab: {
     position: 'absolute',
-<<<<<<< HEAD
+
     right: 20,
     bottom: 28,
-=======
+
     right: 24,
     bottom: 96,
->>>>>>> 9645343c9bc1e71ab7ab6e7e9d8f38b1eb591d57
+
     width: 60,
     height: 60,
     borderRadius: 30,
